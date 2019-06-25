@@ -19,7 +19,7 @@ pair<int, int> dfs(int y, int x) {
 	for (int i = 0; i < 4; i++) {
 		int ny = y + dy[i];
 		int nx = x + dx[i];
-		//¹üÀ§
+		//Â¹Ã¼Ã€Â§
 		if (ny < 0 || ny >= R || nx < 0 || nx >= C)
 			continue;
 		//
@@ -43,7 +43,7 @@ pair<int, int> solution() {
 			{
 				visited[i][j] = true;
 				tmp = dfs(i, j);
-				if (tmp.first > tmp.second)//¾çÀÇ ¼ö°¡ ´õ ¸¹À¸¸é
+				if (tmp.first > tmp.second)//Â¾Ã§Ã€Ã‡ Â¼Ã¶Â°Â¡ Â´Ãµ Â¸Â¹Ã€Â¸Â¸Ã©
 					tmp.second = 0;
 				else
 					tmp.first = 0;
@@ -62,6 +62,5 @@ int main() {
 			cin >> yard[i][j];
 	pair<int, int> ans = solution();
 	cout << ans.first << " " << ans.second << endl;
-	while (1) {}
 	return 0;
 }
